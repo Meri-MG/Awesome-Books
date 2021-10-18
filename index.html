@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Awesome Books</title>
 </head>
 <body>
-    
-    <script src="main.js"></script>
+    <div class="container">
+        <h1 class="title">Awesome Books</h1>
+        <div class="bookInfos">
+            <h2 class="book-title">The adventure</h2>
+            <h3 class="book-author">Borge samp</h3>
+            <button class="btn-1">Remove</button>
+        </div>
+        <div class="bookInfos">
+            <h2 class="book-title">The adventure</h2>
+            <h3 class="book-author">Borge samp</h3>
+            <button class="btn-1">Remove</button>
+        </div>
+    </div>
+    <form id="form">
+        <label for="title">
+            <input class="input-title" id="title" type="text" placeholder="title">
+        </label>
+        <label for="author">
+            <input class="input-author" id="author" type="text" placeholder="Author">
+        </label>
+        <button type="submit" class="add-btn">Add</button>
+    </form>
+
+    <script src="./main.js"></script>
 </body>
 </html>
