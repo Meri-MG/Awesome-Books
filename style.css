@@ -1,30 +1,33 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    align-items: center;
-    background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Books_HD_%288314929977%29.jpg/1280px-Books_HD_%288314929977%29.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  align-items: center;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Books_HD_%288314929977%29.jpg/1280px-Books_HD_%288314929977%29.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: white;
 }
+
 .bookInfos {
-    border-bottom: 1px solid rgb(170, 169, 169);
+  border-bottom: 1px solid rgb(170, 169, 169);
 }
+
 .add-btn {
-    width: 40px;
-    padding: 1px;
+  width: 40px;
+  padding: 1px;
 }
+
 .btn-1 {
-    background-color: rgb(224, 104, 104);
-    margin-bottom: 5px;
+  background-color: rgb(224, 104, 104);
+  margin-bottom: 5px;
 }
