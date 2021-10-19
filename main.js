@@ -37,9 +37,8 @@ function displayBooks() {
   });
 }
 
-function removeBook(book) {
-  const index = myBooks.findIndex((books) => books.id === book);
-  myBooks.splice(index, 1);
+function removeBook(bookId) {
+  myBooks = myBooks.filter((book) => book.id !== bookId);
   localStorage.setItem('Data-base', JSON.stringify(myBooks));
 }
 
@@ -49,7 +48,7 @@ form.addEventListener('submit', (e) => {
   const author = document.querySelector('.input-author').value;
   const id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
   const book = new Book(title, author, id);
-  myBooks.push(book);
+  myBooks = myBooks.concat(book);
   addBookToLibrary(book);
   localStorage.setItem('Data-base', JSON.stringify(myBooks));
   form.reset();
