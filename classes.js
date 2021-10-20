@@ -1,97 +1,60 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable max-classes-per-file */
-
-const form = document.getElementById('form');
-const container = document.querySelector('.container');
-
-class Book {
-    constructor(title, author, id) {
-      this.title = title;
-      this.author = author;
-      this.id = id;
-    }
-  }
-  
-  class Store {
-    static getBooks() {
-      let books;
-      if (localStorage.getItem('books') === null) {
-        books = [];
-      } else {
-        books = JSON.parse(localStorage.getItem('books'));
-      }
-      return books;
-    }
-  
-    static addBook(book) {
-      let books = Store.getBooks();
-      books = books.concat(book);
-      localStorage.setItem('books', JSON.stringify(books));
-    }
-  
-    static removeBook() {
-      let books;
-      if (localStorage.getItem('books') === null) {
-        books = [];
-      } else {
-        books = JSON.parse(localStorage.getItem('books'));
-      }
-      const bookIndex1 = container.children[1].children[1].innerText;
-      books.splice(books.indexOf(bookIndex1), 1);
-  
-      localStorage.setItem('books', JSON.stringify(books));
-    }
+class Books {
+  constructor(savedData) {
+    this.savedData = savedData;
   }
 
-class Display {
-    static displayBooks() {
-        const books = Store.getBooks();
-        books.forEach((book) => Display.addBookToList(book));
-    }
-    static addBookToList(book) {
-        
-        const div = document.createElement('div');
-        div.innerHTML = `
+  displayBooks() {
+    const booksSection = document.querySelector('#books');
+    booksSection.innerHTML = '';
+    this.savedData.forEach((book, index) => {
+      booksSection.innerHTML += `
         <p class="title">${book.title}</p>
-      <p class="author">${book.author}</p>
-      <button class="remove"}>Remove</button>`;
-      container.appendChild(div);
+        <p class="author">${book.author}</p>
+        <button class="remove" onclick="removeBook(${index})">Remove</button>
+      `;
+    });
+  }
+
+  remove(bookId) {
+    if (bookId !== null && bookId !== undefined) {
+      this.savedData.splice(bookId, 1);
+      this.saveBooksToStorage();
+      this.displayBooks();
+    }
+  }
+
+  add(bookTitle, bookAuthor) {
+    const newBook = {
+      title: bookTitle,
+      author: bookAuthor,
     };
+    this.savedData.push(newBook);
+    this.displayBooks();
+    this.saveBooksToStorage();
+  }
 
-    static deleteBook(el) {
-      if(el.classList.contains('remove')){
-        el.parentElement.remove();
-      }
-    }
-
-    static clearFields() {
-      document.querySelector('.input-title').value = '';
-      document.querySelector('.input-author').value = '';
-    }
+  saveBooksToStorage() {
+    localStorage.setItem('books', JSON.stringify(this.savedData));
+  }
 }
 
-// display books
-document.addEventListener('DOMContentLoaded', Display.displayBooks);
-document.querySelector('#form').addEventListener('submit', (e) => {
-  // get form values
-  e.preventDefault();
-  const title = document.querySelector('.input-title').value;
-  const author = document.querySelector('.input-author').value;
-  const id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-
-  const book = new Book(title, author, id);
-  // console.log(book)
-  Display.addBookToList(book);
-
-  Store.addBook(book);
-
-  Display.clearFields();
-});
-
-// remove book list
-
-document.querySelector('.container').addEventListener('click', (e) => {
-  Display.deleteBook(e.target);
-  // console.log(container.children[1].children[1].innerText);
-  Store.removeBook();
+let savedData = localStorage.getItem('books');
+if (savedData === null) {
+  savedData = [];
+} else {
+  savedData = JSON.parse(savedData);
+}
+const books = new Books(savedData);
+books.displayBooks();
+const removeBook = (bookId) => books.remove(bookId);
+removeBook();
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('#form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    books.add(title, author);
+    form.reset();
+  });
 });
