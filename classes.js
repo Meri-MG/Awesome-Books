@@ -1,4 +1,8 @@
 /* eslint-disable max-classes-per-file */
+/* eslint-disable max-classes-per-file */
+
+const form = document.getElementById('form');
+const container = document.querySelector('.container');
 
 class Book {
     constructor(title, author, id) {
@@ -20,18 +24,20 @@ class Book {
     }
   
     static addBook(book) {
-      const books = Store.getBooks();
-      books.concat(book);
+      let books = Store.getBooks();
+      books = books.concat(book);
       localStorage.setItem('books', JSON.stringify(books));
     }
   
-    static removeBook(id) {
-      const books = Store.getBooks();
-      books.forEach((book, index) => {
-        if (books.id === id) {
-          books.splice(index, 1);
-        }
-      });
+    static removeBook() {
+      let books;
+      if (localStorage.getItem('books') === null) {
+        books = [];
+      } else {
+        books = JSON.parse(localStorage.getItem('books'));
+      }
+      const bookIndex1 = container.children[1].children[1].innerText;
+      books.splice(books.indexOf(bookIndex1), 1);
   
       localStorage.setItem('books', JSON.stringify(books));
     }
@@ -43,7 +49,7 @@ class Display {
         books.forEach((book) => Display.addBookToList(book));
     }
     static addBookToList(book) {
-        const container = document.querySelector('.container');
+        
         const div = document.createElement('div');
         div.innerHTML = `
         <p class="title">${book.title}</p>
@@ -86,5 +92,6 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 
 document.querySelector('.container').addEventListener('click', (e) => {
   Display.deleteBook(e.target);
-  Store.removeBook(e.target.parentElement.id);
+  // console.log(container.children[1].children[1].innerText);
+  Store.removeBook();
 });
