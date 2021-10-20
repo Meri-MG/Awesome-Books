@@ -9,18 +9,23 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Awesome Books</h1>
+        <section>
+            <h1 class="title">Awesome Books</h1>
+            <div id="books">
+
+            </div>
+        </section>
     </div>
     <form id="form">
         <label for="title">
-            <input class="input-title" id="title" type="text" placeholder="title">
+            <input class="input-title" id="title" type="text" maxlength="10" placeholder="title" required>
         </label>
         <label for="author">
-            <input class="input-author" id="author" type="text" placeholder="Author">
+            <input class="input-author" id="author" type="text" maxlength="15" placeholder="Author" required>
         </label>
         <button type="submit" class="add-btn">Add</button>
     </form>
 
-    <script src="./main.js"></script>
+    <script src="./js/classes.js"></script>
 </body>
 </html>
