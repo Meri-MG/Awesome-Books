@@ -27,11 +27,7 @@ span {
 
 .container {
   position: relative;
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 6px;
   color: #fff;
 }
@@ -47,32 +43,30 @@ span {
   margin: 0 auto;
 }
 
-/* #books:nth-child(even) {
-  background-color: rgb(170, 169, 169);
-} */
-
 .books {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
+  width: 50%;
   justify-content: space-between;
   margin-bottom: 20px;
   padding: 5px;
   align-items: center;
-  align-self: center;
-}
-.books :nth-child(even){
-  background-color: black;
 }
 
 .myDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin-bottom: 7px;
+  padding: 8px;
+}
+
+.myDiv:nth-child(even) {
+  background-color: rgb(170, 169, 169);
+}
+
+.myDiv:nth-child(odd) {
+  background-color: rgb(146, 143, 143);
 }
 
 .remove {
@@ -84,7 +78,7 @@ span {
   box-shadow: 3px 3px #504e4e;
   cursor: pointer;
   font-weight: 600;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .remove:hover {
@@ -100,10 +94,6 @@ hr {
 }
 
 #form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   width: 30%;
   margin: 20px auto;
@@ -130,6 +120,8 @@ hr {
   color: #fff;
   cursor: pointer;
   font-weight: 600;
+  margin-bottom: 40px;
+  transition: all 0.5s ease;
 }
 
 #form button:hover {
@@ -137,8 +129,19 @@ hr {
   background-color: #fff;
 }
 
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   #form {
-    width: 50%;
+    width: 70%;
+  }
+
+  .books {
+    width: 90%;
   }
 }
