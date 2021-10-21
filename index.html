@@ -8,27 +8,23 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <div class="container d-flex">
-        <h1 class="title"><span>Awesome </span> Books</h1>
-        <section id="div-container">
-            <div class="books d-flex">
+    <div class="container">
+        <section>
+            <h1 class="title1">Awesome Books</h1>
+            <div id="books">
             </div>
         </section>
-        <hr>
     </div>
-    
-    <form id="form" class="d-flex">
-        <h2>Add a New <span>Book</span></h2>
+    <form id="form">
         <label for="title">
-            <input class="input-title" id="title" type="text" placeholder="Title" required>
+            <input class="input-title" id="title" type="text" maxlength="10" minlength="3" placeholder="title" required>
         </label>
         <label for="author">
-            <input class="input-author" id="author" type="text" placeholder="Author" required>
+            <input class="input-author" id="author" type="text" maxlength="15" minlength="3" placeholder="Author" required>
         </label>
         <button type="submit" class="add-btn">Add</button>
     </form>
 
-    <!-- <script src="./main.js"></script> -->
-    <script src="./classes.js"></script>
+    <script src="./js/classes.js"></script>
 </body>
 </html>
