@@ -5,29 +5,136 @@
 }
 
 body {
-  align-items: center;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Books_HD_%288314929977%29.jpg/1280px-Books_HD_%288314929977%29.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(to bottom, #04082793, #6a737a);
+  height: 100vh;
+  font-family: 'Libre Baskerville', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  margin: 40px 0;
+  height: 100px;
+  text-align: center;
+  z-index: 99;
+  color: #fff;
+}
+
+span {
+  color: rgb(224, 104, 104);
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 6px;
-  color: white;
+  color: #fff;
 }
 
-.bookInfos {
-  border-bottom: 1px solid rgb(170, 169, 169);
+#div-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.add-btn {
-  width: 40px;
-  padding: 1px;
+/* #books:nth-child(even) {
+  background-color: rgb(170, 169, 169);
+} */
+
+.books {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 5px;
+  align-items: center;
+  align-self: center;
 }
 
-.btn-1 {
+.myDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.remove {
   background-color: rgb(224, 104, 104);
-  margin-bottom: 5px;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 3px 3px #504e4e;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 1s ease;
+}
+
+.remove:hover {
+  color: rgb(224, 104, 104);
+  background-color: #fff;
+}
+
+hr {
+  width: 100px;
+  align-self: center;
+  background-color: rgb(170, 169, 169);
+  margin: 20px 0;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+  margin: 20px auto;
+}
+
+#form label {
+  width: 100%;
+}
+
+#form input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+}
+
+#form button {
+  align-self: flex-end;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 3px 3px #504e4e;
+  background-color: rgb(66, 155, 25);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#form button:hover {
+  color: rgb(66, 155, 25);
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  #form {
+    width: 50%;
+  }
 }
