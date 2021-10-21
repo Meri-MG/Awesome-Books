@@ -4,13 +4,14 @@ class Books {
   }
 
   displayBooks() {
-    const booksSection = document.querySelector('#books');
+    const booksSection = document.querySelector('.books');
     booksSection.innerHTML = '';
     this.savedData.forEach((book, index) => {
       booksSection.innerHTML += `
-        <p class="title">${book.title}</p>
-        <p class="author">${book.author}</p>
+      <div class="myDiv">
+        <h4 class="title">"${book.title}" By ${book.author}</h4>
         <button class="remove" onclick="removeBook(${index})">Remove</button>
+        </div>
       `;
     });
   }
