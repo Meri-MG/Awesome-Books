@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Calligraffitti', cursive;
+  font-family: 'Kalam', cursive;
   list-style: none;
 }
 
@@ -17,7 +17,7 @@ body {
 .title1 {
   font-size: 35px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h1,
@@ -34,7 +34,7 @@ span {
 
 .time-div p {
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   text-align: end;
   margin: 40px 100px 0 0;
 }
