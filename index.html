@@ -5,16 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" crossorigin="anonymous"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HQREYRLMDN');
+    </script>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" crossorigin="anonymous"></script>
+    <!-- <script src=".js/luxon.js"></script> -->
     <title>Awesome Books</title>
 </head>
 
 <body>
     <nav class="navContainer">
-        <h1 class="title1"><span>Awesome </span> Books</h1>
+        <h1 class="title1" href="index.html"><span>Awesome </span> Books</h1>
         <img src="images/nav.svg" alt="navicon" class="navImg d-none">
         <img src="images/closeNav.svg" alt="closeNav" class="closeImg d-none">
         <ul class="navUl">
@@ -23,12 +33,16 @@
             <li id="contactInfo" class="navLi pointer">Contact info</li>
         </ul>
     </nav>
+    <div class="time-div">
+        <p class="time"></p>
+    </div>
     <div class="container d-flex">
         <section id="div-container">
             <ul class="contactInfoDiv d-none">
-                <li>Meri</li>
-                <li>Brahim</li>
-                <li>our contacts</li>
+                <li><span>Do you have any questions or you want to reach out to say 'Hello'?</span> <br>You can reach out to us!</li>
+                <li><span>Our e-mail:</span> johndoe@gmail.com</li>
+                <li><span>Our phone number:</span> 004358645378</li>
+                <li><span>Our address:</span> Microverse</li>
             </ul>
             <div class="books d-flex d-none"></div>
 

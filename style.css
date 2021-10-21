@@ -14,10 +14,15 @@ body {
   flex-direction: column;
 }
 
+.title1 {
+  font-size: 35px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 h1,
 h2 {
   margin: 40px 0;
-  height: 100px;
   text-align: center;
   z-index: 99;
   color: #fff;
@@ -25,6 +30,13 @@ h2 {
 
 span {
   color: rgb(224, 104, 104);
+}
+
+.time-div p {
+  color: #fff;
+  font-weight: 600;
+  text-align: end;
+  margin: 40px 100px 0 0;
 }
 
 .container {
@@ -159,14 +171,15 @@ hr {
   background-color: rgb(194, 194, 194);
   max-height: 100px;
   justify-content: space-around;
+  align-items: center;
 }
 
 .navUl {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 2%;
   color: black;
-  width: 50%;
+  width: 40%;
   align-items: center;
 }
 
@@ -178,10 +191,6 @@ hr {
 
 .navLi:hover {
   background-color: rgb(224, 104, 104);
-}
-
-.title1 {
-  color: red;
 }
 
 .navImg {
@@ -241,6 +250,16 @@ hr {
 .contactInfoActive {
   display: flex;
   flex-direction: column;
+}
+
+.contactInfoDiv {
+  margin-top: 80px;
+}
+
+.contactInfoDiv li {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
 }
 
 .pointer {

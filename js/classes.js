@@ -69,6 +69,8 @@ const navContainer = document.querySelector('.navContainer');
 const title1 = document.querySelector('.title1');
 const navLi = document.querySelectorAll('.navLi');
 const contactInfoDiv = document.querySelector('.contactInfoDiv');
+const time = document.querySelector('.time');
+const { DateTime } = this.luxon;
 // nav open function
 const x = window.matchMedia('(max-width: 500px)');
 const mobileScreenNav = () => {
@@ -160,3 +162,5 @@ const contactInfoOpen = () => {
 bookList.addEventListener('click', bookListOpen);
 addNew.addEventListener('click', addNewOpen);
 contactInfo.addEventListener('click', contactInfoOpen);
+
+setInterval(() => { time.innerHTML = `${DateTime.now().toLocaleString(DateTime.DATETIME_MED)}`; }, 1000);
