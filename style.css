@@ -63,12 +63,16 @@ span {
   align-items: center;
   align-self: center;
 }
+.books :nth-child(even){
+  background-color: black;
+}
 
 .myDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 7px;
 }
 
 .remove {

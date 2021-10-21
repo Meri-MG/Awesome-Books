@@ -8,8 +8,8 @@ class Books {
     booksSection.innerHTML = '';
     this.savedData.forEach((book, index) => {
       booksSection.innerHTML += `
-      <div class="myDiv>
-        <p class="title">"${book.title}" By ${book.author}</p>
+      <div class="myDiv">
+        <h4 class="title">"${book.title}" By ${book.author}</h4>
         <button class="remove" onclick="removeBook(${index})">Remove</button>
         </div>
       `;
