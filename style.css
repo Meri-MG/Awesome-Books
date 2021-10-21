@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Calligraffitti', cursive;
+  list-style: none;
 }
 
 body {
@@ -136,6 +138,10 @@ hr {
   align-items: center;
 }
 
+.d-none {
+  display: none;
+}
+
 @media (max-width: 768px) {
   #form {
     width: 70%;
@@ -144,4 +150,99 @@ hr {
   .books {
     width: 90%;
   }
+}
+
+/* styling the navbar */
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(194, 194, 194);
+  max-height: 100px;
+  justify-content: space-around;
+}
+
+.navUl {
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  color: black;
+  width: 50%;
+  align-items: center;
+}
+
+.navLi {
+  font-weight: bold;
+  border: 0.8px solid rgb(170, 169, 169);
+  padding: 8px;
+}
+
+.navLi:hover {
+  background-color: rgb(224, 104, 104);
+}
+
+.title1 {
+  color: red;
+}
+
+.navImg {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .navUl {
+    display: none;
+  }
+
+  .navImg {
+    display: block;
+  }
+
+  .closeImg,
+  .navImg {
+    width: 30px;
+  }
+}
+
+.navActive {
+  background-color: rgb(170, 169, 169);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s ease-in;
+}
+
+.closeImgActive {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  height: 40px;
+  width: 40px;
+  transition: 0.8s ease-in-out;
+}
+
+.navUlActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+  transition: 1.8s ease-in;
+}
+
+.navLiActive {
+  font-size: 30px;
+}
+
+.contactInfoActive {
+  display: flex;
+  flex-direction: column;
+}
+
+.pointer {
+  cursor: pointer;
 }
