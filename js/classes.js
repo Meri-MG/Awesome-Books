@@ -59,4 +59,3 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
   });
 });
-
