@@ -139,6 +139,9 @@ const addNewOpen = () => {
   form.classList.remove('d-none');
   booksdiv.classList.add('d-none');
   contactInfoDiv.style.display = 'none';
+  contactInfo.style.backgroundColor = 'unset';
+  bookList.style.backgroundColor = 'unset';
+  addNew.style.backgroundColor = 'rgb(224, 104, 104)';
 };
 const bookListOpen = () => {
   navClose2();
@@ -147,6 +150,9 @@ const bookListOpen = () => {
   form.classList.add('d-none');
   booksdiv.classList.remove('d-none');
   contactInfoDiv.style.display = 'none';
+  contactInfo.style.backgroundColor = 'unset';
+  addNew.style.backgroundColor = 'unset';
+  bookList.style.backgroundColor = 'rgb(224, 104, 104)';
 };
 
 const contactInfoOpen = () => {
@@ -158,6 +164,9 @@ const contactInfoOpen = () => {
   contactInfoDiv.classList.add('contactInfoActive');
   form.classList.add('d-none');
   booksdiv.classList.add('d-none');
+  addNew.style.backgroundColor = 'unset';
+  bookList.style.backgroundColor = 'unset';
+  contactInfo.style.backgroundColor = 'rgb(224, 104, 104)';
 };
 bookList.addEventListener('click', bookListOpen);
 addNew.addEventListener('click', addNewOpen);
