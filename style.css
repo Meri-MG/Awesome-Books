@@ -8,11 +8,17 @@
 
 body {
   background-image: linear-gradient(to bottom, #04082793, #6a737a);
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Libre Baskerville', serif;
   display: flex;
   flex-direction: column;
 }
+
+/* main {
+  min-height: 100%;
+  padding-bottom: 100px;
+  overflow: auto;
+} */
 
 .title1 {
   font-size: 35px;
@@ -30,6 +36,17 @@ h2 {
 
 span {
   color: rgb(224, 104, 104);
+}
+
+footer p {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2% 0;
+}
+
+.time-div {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .time-div p {
@@ -154,6 +171,13 @@ hr {
   display: none;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(194, 194, 194);
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   #form {
     width: 70%;
@@ -209,6 +233,10 @@ hr {
   .closeImg,
   .navImg {
     width: 30px;
+  }
+
+  footer {
+    display: none !important;
   }
 }
 
