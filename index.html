@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" crossorigin="anonymous"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HQREYRLMDN');
+    </script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" crossorigin="anonymous"></script>
     <title>Awesome Books</title>
 </head>
+
 <body>
+    <main>
+    <nav class="navContainer">
+        <h1 class="title1"><span>Awesome </span> Books</h1>
+        <img src="images/nav.svg" alt="navicon" class="navImg d-none">
+        <img src="images/closeNav.svg" alt="closeNav" class="closeImg d-none">
+        <ul class="navUl">
+            <li id="bookList" class="navLi pointer">Book list</li>
+            <li id="addNew" class="navLi pointer">Add New</li>
+            <li id="contactInfo" class="navLi pointer">Contact info</li>
+        </ul>
+    </nav>
+    
+    <div class="time-div">
+        <p class="time"></p>
+    </div>
     <div class="container d-flex">
-        <h1 class="title"><span>Awesome </span> Books</h1>
         <section id="div-container">
-            <div class="books d-flex"></div>
+            <ul class="contactInfoDiv d-none">
+                <li><span>Do you have any questions or you want to reach out to say 'Hello'?</span> <br>You can reach out to us!</li>
+                <li><span>Our e-mail:</span> johndoe@gmail.com</li>
+                <li><span>Our phone number:</span> 004358645378</li>
+                <li><span>Our address:</span> Microverse</li>
+            </ul>
+            <div class="books d-flex d-none"></div>
+
         </section>
         <hr>
     </div>
@@ -21,10 +56,16 @@
             <input class="input-title" id="title" type="text" placeholder="Title" required>
         </label>
         <label for="author">
-            <input class="input-author" id="author" type="text" maxlength="15" minlength="3" placeholder="Author" required>
+            <input class="input-author" id="author" type="text" maxlength="15" minlength="3" placeholder="Author"
+                required>
         </label>
         <button type="submit" class="add-btn">Add</button>
     </form>
+</main>
+    <footer>
+        <p>&copy; Copyright 2021 DidiMeri</p>
+    </footer>
     <script src="./js/classes.js"></script>
 </body>
+
 </html>
