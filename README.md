@@ -2,8 +2,8 @@
 > In this project we will create a project that allows users to store books with the name 
 of the book and the name of the author.
 
-![Desktop Version](https://raw.github.com/Meri-MG/Awesome-Book-jsObjects/main/images/Desktop.png)
-![Mobile Version](https://raw.github.com/Meri-MG/Awesome-Book-jsObjects/main/images/mobile.png)
+![Desktop Version](https://raw.github.com/Meri-MG/Awesome-Books-jsObjects/main/images/Desktop.png)
+![Mobile Version](https://raw.github.com/Meri-MG/Awesome-Books-jsObjects/main/images/mobile.png)
 
 
 # Built with
