@@ -1,6 +1,6 @@
-# Awesome-Books-jsObjects
-> In this project we will create a project that allows users to store books with the name 
-of the book and the name of the author.
+# Awesome-Books
+> The Awesome Books page allows the users to store books with the name 
+of the book and the name of the author. It is responsive and user friendly. 
 
 ![Desktop Version](https://raw.github.com/Meri-MG/Awesome-Books-jsObjects/main/images/Desktop.png)
 ![Mobile Version](https://raw.github.com/Meri-MG/Awesome-Books-jsObjects/main/images/mobile.png)
